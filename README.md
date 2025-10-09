@@ -30,4 +30,7 @@ greatly enhances the adaptability and robustness of financial RAG
 systems, providing a scalable solution for both general-domain and
 company-specific QA tasks.
 
+## VeritasFI RAG Pipeline
+![](assets/complete_ppl_v4.png)
+
 [](https://pic1.imgdb.cn/item/68e632fbc5157e1a885cfba0.png)

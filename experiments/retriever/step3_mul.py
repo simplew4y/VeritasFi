@@ -66,10 +66,7 @@ def worker_init(args, gpu_assignments_list):
     # Initialize OpenAI client
     api_key = os.getenv("OPENAI_API_KEY")
     worker_openai_client = OpenAI(
-        # base_url="https://api.lkeap.cloud.tencent.com/v1",
-        # base_url="https://lkeap.eu-frankfurt.tencentcloudapi.com",
-        base_url="https://api.deepseek.com/v3.1_terminus_expires_on_20251015",
-        # base_url="https://api.deepseek.com",
+        base_url="https://api.openai.com/v1",
         api_key=api_key
     )
     worker_openai_model_name = args.openai_model
