@@ -12,4 +12,4 @@ rerank_topk: 5
 # DEBUG, INFO, WARNING, ERROR, CRITICAL
 log_level: 'INFO'
 
-bearer_token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJsb3R1cyBhZ2VudCB0ZXN0IiwibmFtZSI6IlNpbXBsZSBXYXkiLCJpYXQiOjE1MTYyMzkwMjJ9.L1FjNCS7G5L5KSwoMBIOWX5i7VOF2yGoq31ZdoNEpSI'
+bearer_token: 'your_bearer_token_here'

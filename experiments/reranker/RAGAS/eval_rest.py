@@ -269,17 +269,10 @@ async def evaluate_all(eval_dir, gt_map, output_json_path=None, max_concurrent_t
 
 
 if __name__ == "__main__":
-    # gt_map = load_lotus_ground_truth("/root/autodl-tmp/RAG_Agent_componentTest/RAGAS_eval/gt_data/lotus_gt_1003.json")
-    # gt_map = load_zeekr_ground_truth("/root/autodl-tmp/RAG_Agent_componentTest/RAGAS_eval/gt_data/question_zeekr_gt.json")
-    # gt_map = load_jsonl_ground_truth("/root/autodl-tmp/RAG_Agent_componentTest/RAGAS_eval/gt_data/financebench.jsonl")
-    gt_map = load_csv_ground_truth("/root/autodl-tmp/RAG_Agent_componentTest/RAGAS_eval/gt_data/finqabench.csv")
-    # gt_map = load_parquet_ground_truth("/root/autodl-tmp/RAG_Agent_componentTest/RAGAS_eval/gt_data/FinDer_sampled.parquet")
+    gt_map = load_csv_ground_truth("/path/to/ground_truth.csv")
 
     result = asyncio.run(evaluate_all(
-        # eval_dir="/root/autodl-tmp/dir_whw/RAGAS/RAGAS_FinQA/finqa_questions",
-        # eval_dir="/root/autodl-tmp/production/RAG_Agent/src/test/test_questions/lotus_all/table_tool_call",
-        eval_dir="/root/autodl-tmp/dir_whw/RAGAS/RAGAS_FinQA/woffp_finqa_questions_faissbm25",
+        eval_dir="/path/to/eval_dir",
         gt_map = gt_map,
-        # output_json_path="/root/autodl-tmp/dir_whw/RAGAS/RAGAS_Lotus/lotus_extra_eval_results.json"
-        output_json_path="/root/autodl-tmp/dir_whw/RAGAS/RAGAS_FinQA/woffp_finqa_correctness_faissbm25.json"
+        output_json_path="/path/to/eval_results.json",
     ))

@@ -248,31 +248,10 @@ async def evaluate_all(eval_dir, gt_map, output_json_path=None, max_concurrent_t
 
 
 if __name__ == "__main__":
-    # gt_map = load_lotus_ground_truth("/root/autodl-tmp/RAG_Agent_componentTest/RAGAS_eval/gt_data/lotus_gt_1003.json")
-    gt_map = load_lotus_ground_truth("/root/autodl-tmp/RAG_Agent_componentTest/RAGAS_eval/gt_data/109_lotus_gt.json")
-    # gt_map = load_zeekr_ground_truth("/root/autodl-tmp/RAG_Agent_componentTest/RAGAS_eval/gt_data/question_zeekr_gt.json")
-    # gt_map = load_jsonl_ground_truth("/root/autodl-tmp/RAG_Agent_componentTest/RAGAS_eval/gt_data/financebench.jsonl")
-    # gt_map = load_csv_ground_truth("/root/autodl-tmp/RAG_Agent_componentTest/RAGAS_eval/gt_data/finqabench.csv")
-    # gt_map = load_parquet_ground_truth("/root/autodl-tmp/RAG_Agent_componentTest/RAGAS_eval/gt_data/FinDer_sampled.parquet")
+    gt_map = load_lotus_ground_truth("/path/to/ground_truth.json")
 
     result = asyncio.run(evaluate_all(
-        # eval_dir="/root/autodl-tmp/dir/RAGAS/RAGAS_FinQA/test",
-        # eval_dir="/root/autodl-tmp/RAG_Agent_componentTest/e2e_test_results/finDER_bm10",
-        # eval_dir="/root/autodl-tmp/RAG_Agent_componentTest/e2e_test_results/finDER_faiss10",
-        # eval_dir="/root/autodl-tmp/RAG_Agent_componentTest/e2e_test_results/finDER_faissbm10",
-        # eval_dir="/root/autodl-tmp/dir/RAGAS/RAGAS_FinQA/finqa_questions",
-        # eval_dir="/root/autodl-tmp/dir/RAGAS/RAGAS_FinQA/finqa_questions_cp",
-        # eval_dir="/root/autodl-tmp/production/RAG_Agent/src/test/test_questions/lotus_all/other_questions",
-        # eval_dir="/root/autodl-tmp/dir/RAGAS/RAGAS_FinanceBench/financebench_questions_cp",
-        # eval_dir="/root/autodl-tmp/dir/RAGAS/RAGAS_FinDer/finder_questions",
-        # eval_dir="/root/autodl-tmp/RAG_Agent_componentTest/e2e_test_results/finQA_faissbm10",
-        eval_dir="/root/autodl-tmp/dir/RAGAS/RAGAS_LightRAG/lotus_q",
+        eval_dir="/path/to/eval_dir",
         gt_map = gt_map,
-        # output_json_path="/root/autodl-tmp/dir/RAGAS/RAGAS_FinQA/finqa_correctness_bm25_wo_ffp.json"
-        # output_json_path="/root/autodl-tmp/dir/RAGAS/RAGAS_FinDer/finder_correctness_veritasFi_2.json"
-        # output_json_path="/root/autodl-tmp/dir/RAGAS/RAGAS_FinQA/finqa_correctness_veritasFi_2.json"
-        # output_json_path="/root/autodl-tmp/dir/RAGAS/RAGAS_FinQA/finqa_correctness_faissbm25.json"
-        # output_json_path="/root/autodl-tmp/dir/RAGAS/RAGAS_FinanceBench/financebench_correctness_veritasFi2.json"
-        # output_json_path="/root/autodl-tmp/dir/RAGAS/RAGAS_GraphRAG/woffp_zeekr_correctness_graphrag.json",
-        output_json_path="/root/autodl-tmp/dir/RAGAS/RAGAS_LightRAG/lotus_correctness_lightrag.json",
+        output_json_path="/path/to/ragas_eval_results.json",
     ))

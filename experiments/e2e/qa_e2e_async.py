@@ -53,7 +53,7 @@ def load_questions_file(file_path):
 
 if __name__ == "__main__":
     
-    config_path = os.getenv('CONFIG_PATH', '../../config/production.yaml')
+    config_path = os.getenv('CONFIG_PATH', '/path/to/config.yaml')
     with open(config_path, 'r') as file:
         config = yaml.safe_load(file)
     
