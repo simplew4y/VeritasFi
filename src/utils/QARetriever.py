@@ -132,7 +132,7 @@ def load_qa_chroma_instance(qa_data_path: str, persist_directory: str = "./chrom
 
 if __name__ == "__main__":
     qa_data ="/root/autodl-tmp/dir_tzh/lotus_dataset/write_csv_json/input.json"
-    qa_table_persist_directory = '/root/autodl-tmp/hyc_production/RAG_Agent/log/qa_chroma/'
+    qa_table_persist_directory = '/root/autodl-tmp/production/RAG_Agent/log/qa_chroma/'
 
     # qa_loader = load_qa_chroma_instance(qa_data_path = qa_data, persist_directory = qa_table_persist_directory)
     qa_loader = QAChromaLoader(persist_directory = qa_table_persist_directory, collection_name = "lotus_qa")

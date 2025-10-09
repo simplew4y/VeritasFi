@@ -145,8 +145,6 @@ if __name__ == '__main__':
 
     rag = RAGManager(config)
     
-    # collection0_dir = "/root/autodl-tmp/RAG_Agent_production/tmp/2025_04_all/lotus"
-    #collection0_dir = "/root/autodl-tmp/RAG_Agent_thomas/2025_0605_zeekr/zeekr"
     collection0_dir = f"{key_directory}/data/processed_pdf/2025_0805_zeekr/zeekr"
     collection_dirs = [collection0_dir]
 

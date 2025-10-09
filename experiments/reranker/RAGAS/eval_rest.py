@@ -277,7 +277,7 @@ if __name__ == "__main__":
 
     result = asyncio.run(evaluate_all(
         # eval_dir="/root/autodl-tmp/dir_whw/RAGAS/RAGAS_FinQA/finqa_questions",
-        # eval_dir="/root/autodl-tmp/hyc_production/RAG_Agent/src/test/test_questions/lotus_all/table_tool_call",
+        # eval_dir="/root/autodl-tmp/production/RAG_Agent/src/test/test_questions/lotus_all/table_tool_call",
         eval_dir="/root/autodl-tmp/dir_whw/RAGAS/RAGAS_FinQA/woffp_finqa_questions_faissbm25",
         gt_map = gt_map,
         # output_json_path="/root/autodl-tmp/dir_whw/RAGAS/RAGAS_Lotus/lotus_extra_eval_results.json"

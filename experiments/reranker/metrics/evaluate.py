@@ -194,32 +194,20 @@ def compute_metrics(df_gt: pd.DataFrame, df_reranked: pd.DataFrame):
     return merged_df[['original_question', 'reranked_content', 'relevant_chunks', 'ndcg', 'mrr', 'precision', 'recall']]
 
 if __name__ == "__main__":
-    #root_dir = '/home/xinyu/mamba-wxy/data'
-    root_dir = '/root/autodl-tmp/irelia_pipeline/data'
+    root_dir = 'path/to/data'
+    gt_file = f'{root_dir}/path/to/gt.json'  
     
-
-    #gt_file = '/root/autodl-tmp/RAG_Agent_data/data_for_annotation/annotated/all_annotated.json'
-    #gt_file = f'{root_dir}/model_answers/zeekr_20250627/question_72_annotated.json'  
-    gt_file = f'{root_dir}/model_answers/zeekr_20250627/question_72_annotated.json'  
-    #reranked_dirs = ["/root/autodl-tmp/RAG_Agent_thomas/src/test/test_questions/zeekr_questions/question_batch1_bge-reranker-v2-gemma","/root/autodl-tmp/RAG_Agent_thomas/src/test/test_questions/zeekr_questions/question_batch2_bge-reranker-v2-gemma"]
-    
-    #rerankers = list(range(100, 1701, 100))
     rerankers = list(range(100, 1601, 100)) + [1650]
 
     rerankers = [f'checkpoint-{r}' for r in rerankers]
     
-    #reranker_name = 'checkpoint-100'
     for reranker_name in tqdm(rerankers):
-        #reranked_dirs = [f'{root_dir}/qas/zeekr_questions/20250714/question_batch_chi{i + 1}_{reranker_name}_rewritten' for i in range(4)] + [f'{root_dir}/qas/zeekr_questions/20250714/question_batch_eng{i + 1}_{reranker_name}_rewritten' for i in range(4)]
-        reranked_dirs = [f'/root/autodl-tmp/RAG_Agent_vllm_hyc2/RAG_Agent/src/test/test_onlyzeekr/question_72_top10_{reranker_name}']
-    
-        # reranked_dirs = ["/root/autodl-tmp/RAG_Agent_thomas/src/test/test_questions/zeekr_questions/question_batch1_checkpoint-1780","/root/autodl-tmp/RAG_Agent_thomas/src/test/test_questions/zeekr_questions/question_batch2_checkpoint-1780"]
+        reranked_dirs = [f'/path/to/reranked']
 
         df_gt, df_reranked = load_gt_and_reranked_chunks(gt_file, reranked_dirs)
         metrics_df = compute_metrics(df_gt, df_reranked)
 
-        #output_file = f'{root_dir}/evaluation_results/{20250714}/both_lang/metrics_output_{reranker_name}.csv'
-        output_file = f'{root_dir}/evaluation_results/{20250714}/xbhtest/metrics_output_{reranker_name}.csv'
+        output_file = f'{root_dir}/path/metrics_output_{reranker_name}.csv'
         metrics_df.to_csv(output_file, index=False, encoding='utf-8-sig')
         print(f"Metrics computed and saved to {output_file}")
 

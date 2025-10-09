@@ -247,7 +247,7 @@ class QuestionSimilarityFinder:
 
 
 if __name__ == "__main__":
-    finder = QuestionSimilarityFinder('/root/autodl-tmp/hyc_production/RAG_Agent/log/frequent_qa.db','/root/autodl-tmp/hyc_production/RAG_Agent/log/qa_table.db')
+    finder = QuestionSimilarityFinder('/root/autodl-tmp/production/RAG_Agent/log/frequent_qa.db','/root/autodl-tmp/production/RAG_Agent/log/qa_table.db')
 
     #searching_question = "Who are the board members of Lotus Technology?"
     #searching_question = "What is the gross margin of Lotus Technology?"

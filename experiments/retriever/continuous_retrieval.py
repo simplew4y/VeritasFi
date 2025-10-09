@@ -56,12 +56,12 @@ def worker_init(args, gpu_assignments_list):
         args.qwen_model, 
         trust_remote_code=True, 
         padding_side='left', 
-        cache_dir="/work/xinyu/RAG_Agent/model"
+        cache_dir=""
     )
     worker_qwen_model = AutoModel.from_pretrained(
         args.qwen_model, 
         trust_remote_code=True, 
-        cache_dir="/work/xinyu/RAG_Agent/model", 
+        cache_dir="", 
         device_map=worker_device
     )
     worker_qwen_model.eval()

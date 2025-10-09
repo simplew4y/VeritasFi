@@ -9,11 +9,7 @@ from collections import defaultdict
 
 # Dataset configurations matching eval_all.sh
 DATASET_CONFIGS = {
-    "zeekr": "/work/xinyu/RAG_Agent/experiments/zeekr/eval",
-    "lotus": "/work/xinyu/RAG_Agent/experiments/lotus/eval",
-    "financebench": "/work/xinyu/RAG_Agent/experiments/financebench/eval",
-    "finder": "/work/xinyu/RAG_Agent/experiments/finder/eval",
-    "finqa": "/work/xinyu/RAG_Agent/experiments/finqa/eval"
+    "zeekr": "/path/to/dataset"
 }
 
 def collect_statistics_for_dataset(dataset_name, eval_dir, step_dir='step3_threshold_0.8'):
