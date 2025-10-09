@@ -1,0 +1,40 @@
+[
+  {
+    "type": "function",
+    "function": {
+      "name": "get_stock_price",
+      "description": "Get current stock price for a given ticker symbol.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "ticker": {
+            "type": "string",
+            "description": "The stock ticker symbol, e.g., 'AAPL', 'LOT', 'ZK'"
+          }
+        },
+        "required": [
+          "ticker"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "get_ipo_info",
+      "description": "Get IPO information for a given ticker symbol.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "ticker": {
+            "type": "string",
+            "description": "The stock ticker symbol, e.g., 'AAPL', 'LOT', 'ZK'"
+          }
+        },
+        "required": [
+          "ticker"
+        ]
+      }
+    }
+  }
+]

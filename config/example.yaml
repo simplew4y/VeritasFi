@@ -1,0 +1,15 @@
+persist_directory: "path/to/db"
+
+embeddings_model_name: "BAAI/bge-m3"
+
+llm_model_name: "Qwen/Qwen2___5-72B-Instruct-AWQ"
+llm_base_url: "http://127.0.0.1:8000/v1"
+llm_api_key: "EMPTY"
+
+rerank_model : 'BAAI/bge-reranker-v2-gemma'
+rerank_topk: 5
+
+# DEBUG, INFO, WARNING, ERROR, CRITICAL
+log_level: 'INFO'
+
+bearer_token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJsb3R1cyBhZ2VudCB0ZXN0IiwibmFtZSI6IlNpbXBsZSBXYXkiLCJpYXQiOjE1MTYyMzkwMjJ9.L1FjNCS7G5L5KSwoMBIOWX5i7VOF2yGoq31ZdoNEpSI'
